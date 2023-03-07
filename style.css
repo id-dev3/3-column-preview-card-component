@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=Lexend+Deca:wght@400;500&display=swap');
+
+:root {
+    --font-lexend: 'Lexend Deca', sans-serif;
+    --font-big-shoulders: 'Big Shoulders Display', cursive;
+    --first-item: #e28525;
+    --second-item: #016972;
+    --third-item: #00403f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #f2f2f2;
+}
+
+@media only screen and (max-width: 600px) {
+    div.container {  
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "first"
+          "second"
+          "three";
+        margin: 3rem auto 3rem auto;
+        width: 325px;
+        height: 100%;
+    }
+      
+    div.first { 
+        grid-area: first;
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 0;
+    }
+    
+    .second { grid-area: second; }
+    
+    div.three { 
+        grid-area: three;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 12px;
+    }
+    footer {
+        display: none;
+    }
+}
+
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "first second three";
+    width: 60%;
+    height: 400px;
+    border-radius: 12px;
+    margin: 10rem auto 0 auto;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), 0px 5px 10px rgba(0, 0, 0, 0.1);;
+}
+  
+.first {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 0.6fr 0.6fr 0.6fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "icon"
+      "heading"
+      "body"
+      "button";
+    grid-area: first;
+    background-color: var(--first-item);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    padding: 2rem;
+}
+  
+.icon { grid-area: icon; }
+  
+.heading { grid-area: heading; }
+
+.body { grid-area: body; }
+
+.button {
+    align-self: end; 
+    grid-area: button; 
+}
+  
+.second {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 0.6fr 0.6fr 0.6fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "icon1"
+      "heading1"
+      "body1"
+      "button1";
+    grid-area: second;
+    background-color: var(--second-item);
+    padding: 2rem;
+}
+  
+.icon1 { grid-area: icon1; }
+
+.heading1 { grid-area: heading1; }
+
+.body1 { grid-area: body1; }
+
+.button1 {
+    align-self: end; 
+    grid-area: button1; 
+}
+  
+.three {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 0.6fr 0.6fr 0.6fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "icon2"
+      "heading2"
+      "body2"
+      "button2";
+    grid-area: three;
+    background-color: var(--third-item);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 2rem;
+}
+  
+.icon2 { grid-area: icon2; }
+
+.heading2 { grid-area: heading2; }
+
+.body2 { grid-area: body2; }
+
+.button2 {
+    align-self: end; 
+    grid-area: button2; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+h1 {
+    font-family: var(--font-big-shoulders);
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.body,.body1,.body2 {
+    font-family: var(--font-lexend);
+    color: #ffffffa9;
+}
+
+.btn {
+    font-family: var(--font-lexend);
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    height: 40px;
+    width: 130px;
+}
+
+.btn1 {
+    color: var(--first-item);
+}
+
+.btn1:hover {
+    cursor: pointer;
+    background-color: var(--first-item);
+    color: #fff;
+}
+
+.btn2 {
+    color: var(--second-item);
+}
+
+.btn2:hover {
+    cursor: pointer;
+    background-color: var(--second-item);
+    color: #fff;
+}
+
+.btn3 {
+    color: var(--third-item);
+}
+
+.btn3:hover {
+    cursor: pointer;
+    background-color: var(--third-item);
+    color: #fff;
+}
+
+footer {
+    font-family: var(--font-lexend);
+    font-weight: 500;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 20px;
+    color: #363434;
+}
